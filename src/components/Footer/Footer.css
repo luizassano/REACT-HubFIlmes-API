@@ -1,0 +1,13 @@
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #121212;
+}
+
+h2{
+  color: aliceblue;
+  font-size: 14px;
+}
+
