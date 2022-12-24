@@ -36,6 +36,8 @@ a {
   transition: 0.5s;
 }
 
-a:hover {
+.title-site:hover {
   color: #cc085d;
-}
+  font-size: 27px;}
+
+

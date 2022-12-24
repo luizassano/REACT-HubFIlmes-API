@@ -5,9 +5,10 @@ import {
   BsWallet2,
   BsHourglassSplit,
   BsFillFileEarmarkTextFill,
+  BsFillCalendarEventFill
 } from "react-icons/bs";
 
-import MovieCard from "../components/MovieCard";
+import MovieCard from "../../components/MovieCard/MovieCard";
 
 import "./Movie.css";
 
@@ -33,7 +34,7 @@ const Movie = () => {
   };
 
   useEffect(() => {
-    const movieUrl = `${moviesURL}${id}?${apiKey}`;
+    const movieUrl = `${moviesURL}${id}?${apiKey}&language=pt-BR`;
     getMovie(movieUrl);
   }, []);
 
@@ -61,12 +62,19 @@ const Movie = () => {
             </h3>
             <p>{movie.runtime} minutos</p>
           </div>
+          <div className="info">
+            <h3>
+              <BsFillCalendarEventFill/> Estreia:
+            </h3>
+            <p>{movie.release_date}</p>
+          </div>
           <div className="info description">
             <h3>
               <BsFillFileEarmarkTextFill /> Descrição:
             </h3>
             <p>{movie.overview}</p>
           </div>
+          
         </>
       )}
     </div>

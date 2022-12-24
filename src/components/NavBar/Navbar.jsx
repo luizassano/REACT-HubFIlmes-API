@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
-import logo from './framboesa.png'; 
-
+import { BiSearchAlt2 } from "react-icons/bi";
+import logo from '../../assets/framboesa.png'; 
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -20,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav id="navbar">
-      <h2>
+      <h2 className="title-site">
         <Link to="/">
           Framboesa Filmes <img src={logo} width='50' height='25' />
         </Link>

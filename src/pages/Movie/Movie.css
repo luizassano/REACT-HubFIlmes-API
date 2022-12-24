@@ -32,6 +32,10 @@
   gap: 0.4rem;
 }
 
+.movie-card:hover{
+  transition: 0.9s;
+}
+
 .tagline {
   text-align: center;
   font-size: 1.3rem;

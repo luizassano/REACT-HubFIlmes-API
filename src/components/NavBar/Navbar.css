@@ -8,13 +8,16 @@
 
 #navbar h2 a {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
+
+
 
 #navbar form {
   display: flex;
   gap: 0.5rem;
+  padding-left: 77px;
 }
 
 #navbar input {
