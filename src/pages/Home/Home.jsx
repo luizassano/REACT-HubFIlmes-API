@@ -6,26 +6,25 @@ const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Home = () => {
-  const [topMovies, setTopMovies] = useState([]);
+  const [popularMovies, setPopularMovies] = useState([]);
 
-  const getTopRatedMovies = async (url) => {
+  const getPopularMovies = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
-    setTopMovies(data.results);
+    setPopularMovies(data.results);
   };
 
   useEffect(() => {
-    const topRatedUrl = `${moviesURL}top_rated?${apiKey}&language=pt-BR`;
-    console.log(topRatedUrl);
-    getTopRatedMovies(topRatedUrl);
+    const topRatedUrl = `${moviesURL}popular?${apiKey}&language=pt-BR`;
+    getPopularMovies(topRatedUrl);
   }, []);
 
   return (
     <div className="container">
-      <h2 className="title">Os Melhores Filmes</h2>
+      <h2 className="title">Filmes Populares</h2>
       <div className="movies-container">
-        {topMovies.length > 0 &&
-          topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+        {popularMovies.length > 0 &&
+          popularMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>
   );

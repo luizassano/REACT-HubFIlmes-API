@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {
-  BsGraphUp,
-  BsWallet2,
-  BsHourglassSplit,
-  BsFillFileEarmarkTextFill,
-  BsFillCalendarEventFill
-} from "react-icons/bs";
-
+import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill, BsFillCalendarEventFill} from "react-icons/bs";
 import MovieCard from "../../components/MovieCard/MovieCard";
-
 import "./Movie.css";
 
 const moviesURL = import.meta.env.VITE_API;
@@ -22,7 +14,6 @@ const Movie = () => {
   const getMovie = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
     setMovie(data);
   };
 
